@@ -61,6 +61,76 @@ const data = [
     ],
     correctAnswer: "h1 {background-color:#FFFFFF;}",
   },
+  {
+    question: " Javascript is an _______ language",
+    incorrectAnswers: ["Object-Based", "Procedureal", "None of the above"],
+    correctAnswer: "Object-Oriented",
+  },
+  {
+    question:
+      "Which of the following keywords is used to define a variable in Javascript?",
+    incorrectAnswers: ["var", "let", "none of the above"],
+    correctAnswer: "both var and let",
+  },
+  {
+    question: "How can a datatype be declared to be a constant type?",
+    incorrectAnswers: ["var", "let", "constant"],
+    correctAnswer: "const",
+  },
+  {
+    question:
+      "What keyword is used to check whether a given property is valid or not?",
+    incorrectAnswers: ["is in", "exists", "be"],
+    correctAnswer: "in",
+  },
+  {
+    question:
+      "When an operator’s value is NULL, the typeof returned by the unary operator is:",
+    incorrectAnswers: ["Boolean", "Undefined", "Integer"],
+    correctAnswer: "Object",
+  },
+  {
+    question:
+      "Which function is used to serialize an object into a JSON string in Javascript?",
+    incorrectAnswers: ["parse", "convert", "none of the above"],
+    correctAnswer: "stringify()",
+  },
+  {
+    question: "Which of the following are closures in Javascript?",
+    incorrectAnswers: ["Variables", "Functions", "Objects"],
+    correctAnswer: "All of the above",
+  },
+  {
+    question: "Which of the following is not a Javascript framework?",
+    incorrectAnswers: ["Node", "Vue", "React"],
+    correctAnswer: "Cassandra",
+  },
+  {
+    question:
+      "What keyword is used to declare an asynchronous function in Javascript?",
+    incorrectAnswers: ["await", "timeOut", "check"],
+    correctAnswer: "async",
+  },
+  {
+    question: "How to stop an interval timer in Javascript?",
+    incorrectAnswers: ["clearTImer", "intervalover", "timerStop"],
+    correctAnswer: "clearInterval",
+  },
+  {
+    question: "Which of the following are not server-side Javascript objects?",
+    incorrectAnswers: ["Date", "FileUpload", "Function"],
+    correctAnswer: "All of the above",
+  },
+  {
+    question:
+      "The process in which an object or data structure is translated into a format suitable for transferral over a network, or storage is called?",
+    incorrectAnswers: [
+      "Object Encapsulation",
+      "Object Inheritence",
+      "None of the Above",
+    ],
+    correctAnswer: "Object Serialization",
+  },
 ];
 
 export default data;

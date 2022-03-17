@@ -1,9 +1,10 @@
 import { createContext, useReducer } from "react";
 import { shuffleAnswers } from "../helperFunctions/shuffleAnswers";
 import questions from "../data/data";
-
+const shuffled = questions.sort(() => 0.5 - Math.random());
+let selected = shuffled.slice(0, 10);
 const initialState = {
-  questions,
+  questions: selected,
   currentQuestionIndex: 0,
   showResults: false,
   correctAnswersCount: 0,
