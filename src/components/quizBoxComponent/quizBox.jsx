@@ -5,10 +5,21 @@ import "./quizBox.css";
 
 const Quizbox = ({}) => {
   const [quizState, dispatch] = useContext(QuizContext);
+  const score = quizState.correctAnswerCount + "/" + quizState.questions.length;
   console.log(quizState);
   return (
     <div className="quiz_box">
-      {quizState.showResults && <div>Showing Results</div>}
+      {quizState.showResults && (
+        <div>
+          Showing Results:{score}
+          <div
+            className="nextBtn"
+            onClick={() => dispatch({ type: "RESTART" })}
+          >
+            Restart
+          </div>
+        </div>
+      )}
       {/* Show quiz */}
       {!quizState.showResults && (
         <div>
@@ -37,7 +48,7 @@ const Quizbox = ({}) => {
           </section>
           {/* footer of Quiz Box */}
           <footer>
-            {/* <div className="total_que">{score}/20 correct</div> */}
+            <div className="total_que">{score} correct</div>
             <div
               className="nextBtn"
               onClick={() => dispatch({ type: "NEXT_QUESTION" })}

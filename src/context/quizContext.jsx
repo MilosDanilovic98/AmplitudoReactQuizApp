@@ -5,6 +5,7 @@ const initialState = {
   questions,
   currentQuestionIndex: 0,
   showResults: false,
+  correctAnswerCount: 0,
 };
 
 const reducer = (state, action) => {
@@ -22,8 +23,12 @@ const reducer = (state, action) => {
         showResults,
       };
     }
+    case "RESTART": {
+      return initialState;
+    }
+    default:
+      return state;
   }
-  return state;
 };
 
 export const QuizContext = createContext();
