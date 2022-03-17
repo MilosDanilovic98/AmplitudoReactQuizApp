@@ -1,0 +1,39 @@
+.quiz_box {
+  background-color: red;
+  width: 50%;
+  padding: 1rem;
+}
+
+.quiz_box footer {
+  display: flex;
+  justify-content: space-between;
+}
+.ss {
+  background-color: black;
+}
+
+.quiz_box header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.quiz_box header .timer {
+  display: flex;
+}
+
+.que_text {
+  text-align: center;
+}
+
+.option_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.option_list div {
+  background-color: azure;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
