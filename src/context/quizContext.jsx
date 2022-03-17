@@ -33,10 +33,15 @@ const reducer = (state, action) => {
       const currentQuestionIndex = showResults
         ? state.currentQuestionIndex
         : state.currentQuestionIndex + 1;
+      const answers = showResults
+        ? []
+        : shuffleAnswers(state.questions[currentQuestionIndex]);
       return {
         ...state,
         currentQuestionIndex,
+        currentAnswer: "",
         showResults,
+        answers,
       };
     }
     case "RESTART": {

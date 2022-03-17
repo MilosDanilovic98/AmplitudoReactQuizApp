@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./answer.css";
 const Answer = ({
   answerText,
   index,
@@ -15,7 +15,10 @@ const Answer = ({
   const wrongAnswerClass = isWrongAnswer ? "wrong-answer" : "";
   const disabledClass = currentAnswer ? "disabled-answer" : "";
   return (
-    <div className={"answer"} onClick={() => onSelectAnswer(answerText)}>
+    <div
+      className={`answer ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
+      onClick={() => onSelectAnswer(answerText)}
+    >
       <div className="answer-letter">{letterMapping[index]}</div>
       <div className="answer-text">{answerText}</div>
     </div>

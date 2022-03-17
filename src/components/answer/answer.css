@@ -1,0 +1,21 @@
+.answer {
+  width: 48%;
+  background: #fff;
+  border: 2px solid #0094da;
+  min-height: 70px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.correct-answer {
+  border: 2px solid green;
+}
+
+.wrong-answer {
+  border: 2px solid red;
+}
+
+.disabled-answer {
+  pointer-events: none;
+}
