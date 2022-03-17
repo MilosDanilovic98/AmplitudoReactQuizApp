@@ -1,7 +1,10 @@
-import React from "react";
-
+import { useContext } from "react";
+import { QuizContext } from "../../context/quizContext";
+import "./question.css";
 const Question = () => {
-  return <div>Question</div>;
+  const [quizState, dispatch] = useContext(QuizContext);
+  const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+  return <div className="questionText">{currentQuestion.question}</div>;
 };
 
 export default Question;

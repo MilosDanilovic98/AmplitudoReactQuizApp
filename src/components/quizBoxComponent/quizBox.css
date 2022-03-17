@@ -8,8 +8,8 @@
   display: flex;
   justify-content: space-between;
 }
-.ss {
-  background-color: black;
+.nextBtn {
+  background-color: orange;
 }
 
 .quiz_box header {

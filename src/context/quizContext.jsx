@@ -1,8 +1,20 @@
 import { createContext, useReducer } from "react";
+import questions from "../data/data";
 
-const initialState = {};
+const initialState = {
+  questions,
+  currentQuestionIndex: 0,
+};
 
 const reducer = (state, action) => {
+  switch (action.type) {
+    case "NEXT_QUESTION": {
+      return {
+        ...state,
+        currentQuestionIndex: state.currentQuestionIndex + 1,
+      };
+    }
+  }
   return state;
 };
 
