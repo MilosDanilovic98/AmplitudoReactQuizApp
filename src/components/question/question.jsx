@@ -5,6 +5,7 @@ import "./question.css";
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+
   return (
     <div>
       <div className="questionText">{currentQuestion.question}</div>

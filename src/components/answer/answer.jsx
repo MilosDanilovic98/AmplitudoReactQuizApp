@@ -1,4 +1,6 @@
-import React from "react";
+import { useContext } from "react";
+import { QuizContext } from "../../context/quizContext";
+
 import "./answer.css";
 const Answer = ({
   answerText,
@@ -7,6 +9,14 @@ const Answer = ({
   currentAnswer,
   correctAnswer,
 }) => {
+  const [quizState, dispatch] = useContext(QuizContext);
+
+  function bla() {
+    onSelectAnswer(answerText);
+    setTimeout(() => {
+      dispatch({ type: "NEXT_QUESTION" });
+    }, 3000);
+  }
   const letterMapping = ["A", "B", "C", "D"];
   const isCorrectAnswer = currentAnswer && answerText === correctAnswer;
   const isWrongAnswer =
@@ -17,7 +27,7 @@ const Answer = ({
   return (
     <div
       className={`answer ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
-      onClick={() => onSelectAnswer(answerText)}
+      onClick={() => bla()}
     >
       <div className="answer-letter">{letterMapping[index]}</div>
       <div className="answer-text">{answerText}</div>

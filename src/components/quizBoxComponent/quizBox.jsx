@@ -8,7 +8,6 @@ const Quizbox = ({}) => {
 
   const score =
     quizState.correctAnswersCount + "/" + quizState.questions.length;
-  console.log(quizState);
   return (
     <div className="quiz_box">
       {/* Start Box */}
@@ -59,9 +58,9 @@ const Quizbox = ({}) => {
             <div className="total_que">{score} correct</div>
             <div
               className="nextBtn"
-              onClick={() => dispatch({ type: "NEXT_QUESTION" })}
+              onClick={() => dispatch({ type: "RESTART" })}
             >
-              Next Question
+              GIVE UP
             </div>
           </footer>
         </div>
