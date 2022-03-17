@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { shuffleAnswers } from "../helperFunctions/shuffleAnswers";
 import questions from "../data/data";
 
 const initialState = {
@@ -6,6 +7,7 @@ const initialState = {
   currentQuestionIndex: 0,
   showResults: false,
   correctAnswerCount: 0,
+  answers: shuffleAnswers(questions[0]),
 };
 
 const reducer = (state, action) => {
