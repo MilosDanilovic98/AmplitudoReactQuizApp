@@ -2,24 +2,6 @@ import React, { useRef, useState } from "react";
 import "./quizBox.css";
 
 const Quizbox = ({}) => {
-  const [count, setCount] = useState(0);
-  const [score, setScore] = useState(0);
-
-  const option = useRef();
-  // const option2 = useRef();
-  // const option3 = useRef();
-  // const option4 = useRef();
-
-  function nextQuestion() {
-    setCount(count + 1);
-  }
-
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
-  };
-
   return (
     <div className="quiz_box">
       <header>
@@ -42,10 +24,7 @@ const Quizbox = ({}) => {
       </section> */}
       {/* footer of Quiz Box */}
       <footer>
-        <div className="total_que">{score}/20 correct</div>
-        <button className="next_btn" onClick={nextQuestion}>
-          Next Question
-        </button>
+        {/* <div className="total_que">{score}/20 correct</div> */}
       </footer>
     </div>
   );
