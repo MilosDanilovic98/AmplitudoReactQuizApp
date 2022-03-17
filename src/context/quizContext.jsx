@@ -9,10 +9,20 @@ const initialState = {
   correctAnswersCount: 0,
   answers: shuffleAnswers(questions[0]),
   currentAnswer: "",
+  started: false,
+  timerActive: false,
+  timerSeconds: 0,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case "START": {
+      return {
+        ...state,
+        timerActive: true,
+        started: true,
+      };
+    }
     case "SELECT_ANSWER": {
       const correctAnswersCount =
         action.payload ===
@@ -46,6 +56,12 @@ const reducer = (state, action) => {
     }
     case "RESTART": {
       return initialState;
+    }
+    case "TIMER_PLUS": {
+      return {
+        ...state,
+        timerSeconds: state.timerSeconds + 1,
+      };
     }
     default:
       return state;
