@@ -8,39 +8,45 @@ const Quizbox = ({}) => {
   console.log(quizState);
   return (
     <div className="quiz_box">
-      <div>
-        Question {quizState.currentQuestionIndex + 1}/
-        {quizState.questions.length}
-      </div>
-      <header>
-        <div className="title">Awesome Quiz Application</div>
+      {quizState.showResults && <div>Showing Results</div>}
+      {/* Show quiz */}
+      {!quizState.showResults && (
+        <div>
+          <div>
+            Question {quizState.currentQuestionIndex + 1}/
+            {quizState.questions.length}
+          </div>
+          <header>
+            <div className="title">Awesome Quiz Application</div>
 
-        <div className="timer">
-          <div className="time_left_txt">Time Left:</div>
-          <div className="timer_sec">15</div>
-        </div>
-      </header>
+            <div className="timer">
+              <div className="time_left_txt">Time Left:</div>
+              <div className="timer_sec">15</div>
+            </div>
+          </header>
 
-      <section>
-        <Question></Question>
-        {/* <div className="option_list">
+          <section>
+            <Question></Question>
+            {/* <div className="option_list">
           {questions[count].offeredAnswers.map((answer) => (
             <div onClick={() => handleAnswerOptionClick(answer.isTrue)}>
               {answer.answerText}
             </div>
           ))}
         </div>*/}
-      </section>
-      {/* footer of Quiz Box */}
-      <footer>
-        {/* <div className="total_que">{score}/20 correct</div> */}
-        <div
-          className="nextBtn"
-          onClick={() => dispatch({ type: "NEXT_QUESTION" })}
-        >
-          Next Question
+          </section>
+          {/* footer of Quiz Box */}
+          <footer>
+            {/* <div className="total_que">{score}/20 correct</div> */}
+            <div
+              className="nextBtn"
+              onClick={() => dispatch({ type: "NEXT_QUESTION" })}
+            >
+              Next Question
+            </div>
+          </footer>
         </div>
-      </footer>
+      )}
     </div>
   );
 };
