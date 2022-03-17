@@ -5,7 +5,8 @@ import "./quizBox.css";
 
 const Quizbox = ({}) => {
   const [quizState, dispatch] = useContext(QuizContext);
-  const score = quizState.correctAnswerCount + "/" + quizState.questions.length;
+  const score =
+    quizState.correctAnswersCount + "/" + quizState.questions.length;
   console.log(quizState);
   return (
     <div className="quiz_box">
