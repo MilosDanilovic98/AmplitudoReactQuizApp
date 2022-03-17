@@ -15,7 +15,7 @@ const Answer = ({
     onSelectAnswer(answerText);
     setTimeout(() => {
       dispatch({ type: "NEXT_QUESTION" });
-    }, 3000);
+    }, 1500);
   }
   const letterMapping = ["A", "B", "C", "D"];
   const isCorrectAnswer = currentAnswer && answerText === correctAnswer;

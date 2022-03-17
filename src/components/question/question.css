@@ -1,4 +1,21 @@
 .questionText {
   text-align: center;
-  background-color: blue;
+  font-size: 2rem;
+  border-bottom: 2px solid red;
+  color: rgb(57, 30, 210);
+}
+
+.answers {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .answers {
+    grid-template-columns: 1fr;
+  }
 }

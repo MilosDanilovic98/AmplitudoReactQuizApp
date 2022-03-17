@@ -1,19 +1,33 @@
 .answer {
-  width: 48%;
-  background: #fff;
-  border: 2px solid #0094da;
-  min-height: 70px;
+  background: antiquewhite;
+  min-height: 3rem;
   cursor: pointer;
-  margin-bottom: 30px;
+  box-sizing: border-box;
   display: flex;
+  align-items: center;
 }
 
+.answer-letter {
+  background-color: rebeccapurple;
+  height: 100%;
+  border: 2px solid black;
+  color: white;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer-text {
+  font-size: 1.3rem;
+  width: 80%;
+}
 .correct-answer {
-  border: 2px solid green;
+  border: 4px solid green;
 }
 
 .wrong-answer {
-  border: 2px solid red;
+  border: 4px solid red;
 }
 
 .disabled-answer {

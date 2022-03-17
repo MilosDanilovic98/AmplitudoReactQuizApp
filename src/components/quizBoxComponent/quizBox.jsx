@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { QuizContext } from "../../context/quizContext";
 import Question from "../question/question";
 import "./quizBox.css";
 import Timer from "../timer/timer";
-const Quizbox = ({}) => {
+const Quizbox = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 
   const score =
@@ -12,9 +12,9 @@ const Quizbox = ({}) => {
     <div className="quiz_box">
       {/* Start Box */}
       {!quizState.started && (
-        <div>
-          <p>Welcome to my Quiz</p>
-          <p>Click on the button to begin</p>
+        <div className="started">
+          <h1>Welcome to my Quiz</h1>
+          <h3>Click on the button to begin</h3>
           <div className="nextBtn" onClick={() => dispatch({ type: "START" })}>
             START
           </div>
@@ -22,8 +22,8 @@ const Quizbox = ({}) => {
       )}
       {/* Result box */}
       {quizState.showResults && (
-        <div>
-          Showing Results:{score} Time:{quizState.timerSeconds}
+        <div className="showResults">
+          <p>Correct Answers:{score}</p> Your Time:{quizState.timerSeconds}s
           <div
             className="nextBtn"
             onClick={() => dispatch({ type: "RESTART" })}
@@ -35,12 +35,12 @@ const Quizbox = ({}) => {
       {/* Show quiz */}
       {!quizState.showResults && quizState.started && (
         <div>
-          <div>
+          <div className="questionCounter">
             Question {quizState.currentQuestionIndex + 1}/
             {quizState.questions.length}
           </div>
           <header>
-            <div className="title">Awesome Quiz Application</div>
+            <h2 className="title">Choose Your Answer!</h2>
 
             <div className="timer">
               <div className="time_left_txt">Time:</div>

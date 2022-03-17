@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { QuizContext } from "../../context/quizContext";
 
 const Timer = () => {
@@ -16,7 +16,7 @@ const Timer = () => {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, []);
 
   return (
     <div className="app">
